@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="image/shopping.jpeg">
+  <title>Modës</title>
+ <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styel ki 2.css">
+   <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+   </script>
+</head>
+<body>
+   <header>
+    <div class="nav-container">
+      <nav>
+          <a href="Home.html" class="logo">modës</a>
+          <ul> 
+              <li><a href="Home.html">Home</a></li>
+                <li>  <a href="rahma.htm"> Trousers </a> </li>
+              <li><a href="connect with us.html" target="_blank">Connect with us</a></li>
+              <li><a href="index re.html">Account</a></li> 
+          </ul>
+      </nav>
+  </div>
+   </header>
+   <section>
+   <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src= "imge/WhatsApp Image 2022-05-09 at 3.37.53 PM.jpeg" style="width:50%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM.jpeg" style="width:50%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM (2).jpeg" style="width:50%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM (2).jpeg" style="width:50%">
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src= "imge/WhatsApp Image 2022-05-09 at 3.37.53 PM.jpeg" style="width:50%" onclick="currentSlide(1)" alt=" ">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM.jpeg" style="width:50%" onclick="currentSlide(2)" alt=" ">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM (2).jpeg" style="width:50%" onclick="currentSlide(3)" alt=" ">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src= "imge/WhatsApp Image 2022-05-09 at 3.37.52 PM (1).jpeg" style="width:50%" onclick="currentSlide(4)" alt=" ">
+        </div>
+      </div>
+    </div>
+  </section>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+      <div class="details">
+         <h2>Kids T-shirt</h2>
+         <p><strong>Brand:</strong> Jack & Jones</p>
+         <p><strong>Price:</strong> EGP 199.00</p>
+         <P><del>EGP 280.00</del></P> 
+            <strong>Product details</strong><br>
+            The perfect Jack & Jones staple for the perfect cut-out
+            look and feel Crafted<br> from a relaxed fit Pair with jeans,
+            trainers or your favorite t-shirt for<br> a cool casual look, a
+            staple you won't reach again and again<br><br>
+            <strong>More Details</strong><br><br>
+            <strong>Composition Material</strong><br>
+            100% Cotton<br><br>
+            <strong>washing instructions</strong><br>
+            Machine wash<br><br>
+            <strong>Sleeve type</strong><br>
+            short sleeves<br><br>
+            <strong>Target group</strong><br>
+            boys<br><br>
+            <strong>Product Description</strong><br>
+            made of Soft and comfortable cotton<br>
+            round neck<br>
+            Logo printed on the chest<br><br>
+            <div class="icons">
+            <input type="number" value="1">
+            <a href="index.html" class="btn">add to cart</a>
+           </div>
+      </div>  
+</body>
+</html>
